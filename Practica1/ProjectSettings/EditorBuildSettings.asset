@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/lerp.unity
+    guid: b2b598ede5d74f34c9cfdb0d6bb8d049
+  - enabled: 1
+    path: Assets/Scenes/programacion.unity
+    guid: 21f0b04613ea1864186afcd539be16d3
   m_configObjects: {}
