@@ -11,6 +11,7 @@ public class GunScript : MonoBehaviour
     public GameObject bulletImpactPrefab;
 
     public float ImpacForce = 40f;
+    public int damageDealt = 1;
 
     private void Update()
     {
@@ -35,6 +36,12 @@ public class GunScript : MonoBehaviour
             if (rb != null)
             {
                 rb.AddForce(-hitInfo.normal * ImpacForce, ForceMode.Impulse);
+            }
+
+            Health health = hitInfo.collider.gameObject.GetComponent<Health>();
+            if (health != null)
+            {
+                health.TakeDamage(damageDealt);
             }
         }
         else

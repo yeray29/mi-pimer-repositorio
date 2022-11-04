@@ -8,7 +8,7 @@ public class DamageMaker : PlayerTrigger
 
 	public override void OnPlayerEnter(GameObject playerObject)
 	{
-		PlayerHealth health = playerObject.GetComponent<PlayerHealth>();
+		Health health = playerObject.GetComponent<Health>();
 		health.TakeDamage(damageAmount);
 	}
 }
