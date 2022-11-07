@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/lerp.unity
-    guid: b2b598ede5d74f34c9cfdb0d6bb8d049
+    path: Assets/Scenes/JUEGO CLIK/CLICK.unity
+    guid: 2780c42b6511d57499e388627d9cb005
   - enabled: 1
-    path: Assets/Scenes/programacion.unity
-    guid: 21f0b04613ea1864186afcd539be16d3
+    path: Assets/Scenes/JUEGO CLIK/juego.unity
+    guid: b79ad50e2512c604f89a9db87d2f639a
   m_configObjects: {}

@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class levelManager : MonoBehaviour
+public class CambioEscena : MonoBehaviour
 {
     public void BeginGame()
     {
-        Debug.Log("Empieza el juego");
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextScene);
         if (nextScene >= SceneManager.sceneCountInBuildSettings)
