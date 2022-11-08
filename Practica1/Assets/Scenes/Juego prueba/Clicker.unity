@@ -156,9 +156,11 @@ MonoBehaviour:
   gamePanel: {fileID: 1275731841}
   endPanel: {fileID: 902488598}
   timeLeftText: {fileID: 1030520086}
-  playTime: 30
+  playTime: 5
   timeLeft: 0
+  targetNumbreOfClick: 10
   NumbreOfClickText: {fileID: 2039168373}
+  gameOverText: {fileID: 2001440760}
 --- !u!4 &260742042
 Transform:
   m_ObjectHideFlags: 0
@@ -587,7 +589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &902488599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -902,7 +904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1275731842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1391,8 +1393,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -48}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -33.0562}
+  m_SizeDelta: {x: 375.3369, y: 66.1124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001440760
 MonoBehaviour:

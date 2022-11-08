@@ -14,23 +14,22 @@ public class ClickerManager : MonoBehaviour
 
     private bool timeIsTicking = false;
 
-    private int numbreOfClick = 0;
+    private int numberOfClick = 0;
+    public int targetNumbreOfClick = 10;
     public Text NumbreOfClickText;
-
-    private void Start()
-    {
-    }
+    public Text gameOverText;
+    private string maxScoreKey = "maxScore";
 
     public void Click()
     {
-        numbreOfClick++;
-        NumbreOfClickText.text = numbreOfClick.ToString();
+        numberOfClick++;
+        NumbreOfClickText.text = numberOfClick.ToString();
     }
 
     public void Restard()
     {
-        numbreOfClick = 0;
-        NumbreOfClickText.text = numbreOfClick.ToString();
+        numberOfClick = 0;
+        NumbreOfClickText.text = numberOfClick.ToString();
     }
 
     public void startCountDonw()
@@ -44,7 +43,7 @@ public class ClickerManager : MonoBehaviour
         if (timeIsTicking)
         {
             timeLeft -= Time.deltaTime;
-            timeLeftText.text = timeLeft.ToString();
+            timeLeftText.text = timeLeft.ToString("0.00");
             if (timeLeft < 0)
             {
                 timeIsTicking = false;
@@ -57,5 +56,29 @@ public class ClickerManager : MonoBehaviour
     {
         gamePanel.SetActive(false);
         endPanel.SetActive(true);
+        CheckWinningConditions();
+    }
+
+    private void CheckWinningConditions()
+    {
+        if (numberOfClick >= targetNumbreOfClick)
+        {
+            int maxScore = PlayerPrefs.GetInt(maxScoreKey);
+            if (numberOfClick > maxScore)
+            {
+                gameOverText.text = "felicidades has clikado " + numberOfClick +
+                    " de los " + targetNumbreOfClick + " has alcanzado un nuevo record";
+                PlayerPrefs.SetInt(maxScoreKey, numberOfClick);
+            }
+            else
+            {
+                gameOverText.text = "felicidades has clikado " + numberOfClick +
+                    " de los " + targetNumbreOfClick + " necesarios, el record som " + maxScore;
+            }
+        }
+        else
+        {
+            gameOverText.text = "lo siento pero no lo has conseguido";
+        }
     }
 }
